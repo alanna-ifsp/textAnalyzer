@@ -20,7 +20,7 @@ public class WriteFile {
 		}
 		catch(Exception e)
 		{
-			throw new Exception("Erro na gravação do arquivo: " + e.getMessage());
+			throw new Exception("Error writing file: " + e.getMessage());
 		}
 	
 	}
