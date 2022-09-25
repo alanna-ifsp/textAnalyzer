@@ -1,4 +1,5 @@
 
+import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
 import java.nio.file.NoSuchFileException;
 import java.nio.file.Paths;
@@ -32,7 +33,7 @@ public class ReadFile {
 	public List<String> readFile(String filePath) throws Exception {
 		try {
 			
-			String textOfFile = new String(Files.readAllBytes(Paths.get(filePath + ".txt")));
+			String textOfFile = new String(Files.readAllBytes(Paths.get(filePath + ".txt")),StandardCharsets.UTF_8);
 
 			if (textOfFile.isEmpty())
 				throw new Exception(new Exception("Empty file!"));
