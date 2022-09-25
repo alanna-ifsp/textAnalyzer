@@ -35,14 +35,14 @@ public class ReadFile {
 			String textOfFile = new String(Files.readAllBytes(Paths.get(filePath + ".txt")));
 
 			if (textOfFile.isEmpty())
-				throw new Exception(new Exception("Arquivo vazio!"));
+				throw new Exception(new Exception("Empty file!"));
 
 			textOfFile = formatText(textOfFile);
 			return wordSeparator(textOfFile);
 		} catch (NoSuchFileException e) {
-			throw new Exception("Arquivo não encontrado!");
+			throw new Exception("File not found!");
 		} catch (Exception e) {
-			throw new Exception("Erro na leitura do arquivo " + e.getMessage());
+			throw new Exception("Error reading file: " + e.getMessage());
 		}
 	}
 
