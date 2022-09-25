@@ -12,7 +12,7 @@ public class Main {
 			String nameFile = "";
 
 			System.out
-					.println("Insira, separado por vírgulas o nomes dos arquivos (sem a extensão) que deseja analisar");
+					.println("Enter the files separated by comma (without the file extension) that you want to analyze");
 			nameFile = in.next();
 			in.close();
 			String[] fileNamesSeparator = nameFile.split(",");
@@ -20,11 +20,12 @@ public class Main {
 			for (int i = 0; i < fileNamesSeparator.length; i++)
 				analyzer.analyzer(fileNamesSeparator[i]);
 			
-			System.out.println("Texto analisado com sucesso! Arquivos já estão disponíveis na pasta!");
+			System.out.println("Text analyzed successfully! Files are available in the folder!");
+			
 		}
 
 		catch (Exception e) {
-			System.out.println("Processo não foi concluído:  " + e.getMessage());
+			System.out.println("Process not completed:  " + e.getMessage());
 		}
 
 	}
