@@ -4,8 +4,17 @@ import java.util.List;
 import java.util.Set;
 import java.util.TreeMap;
 
+/**
+ * Class responsible for processing analyzer text of file
+ * 
+ */
+
 public class Analyzer {
 
+	/**
+	 * Method responsible for processing all text of file, declare nodes and edge words. 
+	 * @param allWordsOfFile - List of all words of file
+	 */
 	private TreeMap<String, Set<String>> processing(List<String> allWordsOfFile) {
 
 		Set<String> nodes = new HashSet<String>();
@@ -22,6 +31,7 @@ public class Analyzer {
 				}
 			}
 
+			/*Only nodes with edge can are in List*/
 			if (!wordsDestination.isEmpty())
 				result.put(node, wordsDestination);
 		}
@@ -29,6 +39,11 @@ public class Analyzer {
 		return result;
 	}
 
+	/**
+	 * Method receive text of file, call processing method and after write the text already processed. 
+	 * @param fileName - Name of file 
+	 * @throws Exception - Exception when analyzer text
+	 */
 	public void analyzer(String fileName) throws Exception {
 		ReadFile read = new ReadFile();
 		WriteFile write = new WriteFile();

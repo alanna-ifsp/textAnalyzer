@@ -7,8 +7,17 @@ import java.text.Normalizer;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * Class responsible for read file .txt
+ *
+ */
 public class ReadFile {
 
+	/**
+	 * This method removes all special characters and punctuation from the text.
+	 * @param text
+	 * @return text in lowerCase
+	 */
 	private String formatText(String text) {
 
 		String returnText = text;
@@ -20,6 +29,11 @@ public class ReadFile {
 		return returnText.toLowerCase();
 	}
 
+	/**
+	 * This method receive one string, separate and return list of String
+	 * @param text
+	 * @return list of string separate
+	 */
 	private List<String> wordSeparator(String text) {
 		List<String> wordsOfFile = new ArrayList<String>();
 
@@ -30,6 +44,12 @@ public class ReadFile {
 		return wordsOfFile;
 	}
 
+	/**
+	 * Method is responsible for read file .txt and return list of words of text
+	 * @param filePath - path of file
+	 * @return list of text words
+	 * @throws Exception when read text
+	 */
 	public List<String> readFile(String filePath) throws Exception {
 		try {
 			

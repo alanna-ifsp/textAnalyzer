@@ -2,8 +2,16 @@
 
 import java.util.Scanner;
 
+/**
+ * This class responsible for user interaction
+ *
+ */
 public class Main {
 
+	/**
+	 * This method receive files name, and call analyzer method and print result of processing
+	 * @param args - default parameter
+	 */
 	public static void main(String[] args) {
 
 		try {
